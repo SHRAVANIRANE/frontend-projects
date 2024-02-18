@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6a63bb10a4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&family=Satisfy&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Patua+One&family=Protest+Riot&family=Satisfy&display=swap");
+    </style>
+    <style>
+      body {
+        background-color: rgb(232, 239, 176);
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        background-color: rgb(232, 239, 176);
+      }
+      .navbar ul {
+        display: flex;
+        margin: 0;
+      }
+      li {
+        list-style: none;
+        margin: 10px;
+        padding: 20px;
+        font-size: 20px;
+        font-family: monospace;
+        cursor: pointer;
+      }
+
+      .navbar ul li {
+        position: relative;
+      }
+
+      .navbar ul li:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+      }
+
+      img {
+        width: 800px;
+        height: 400px;
+        padding: 30px;
+      }
+      .mainsection {
+        margin-left: 10rem;
+        display: flex;
+        align-items: center;
+      }
+      h1 {
+        font-size: 70px;
+        font-family: "Patua One", serif;
+      }
+      p {
+        font-size: 1.4rem;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      .btn {
+        display: flex;
+        margin-left: 10rem;
+      }
+      .btn button {
+        padding: 20px;
+        margin-right: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: none;
+        cursor: pointer;
+      }
+      .btn .hire button {
+        /* background-color: rgb(105, 185, 246); */
+        background-color: orange;
+        color: #000;
+      }
+      .btn button:hover {
+        transform: scale(1.1);
+      }
+      .btn .work i {
+        margin-right: 9px;
+      }
+      footer {
+        margin-left: 10rem;
+        padding-top: 3.6rem;
+      }
+      footer i {
+        padding: 10px;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li>Gallery</li>
+        <li>Artist</li>
+        <li>Jobs</li>
+        <li>Blog</li>
+        <li class="li-art"><i class="fa-solid fa-palette"></i></li>
+        <li>Pricing</li>
+        <li>FAQ</li>
+        <li>Tools</li>
+        <li>Login</li>
+      </ul>
+    </div>
+    <div class="mainsection">
+      <div class="firstsection">
+        <div class="text">
+          <h1>
+            The Art <br />
+            Of Hiring
+          </h1>
+          <p>
+            Do you need an artist to breath art into your product, marketing
+            campaign or creative project?? Here's the perfect platform to find a
+            perfect illustrator, 2D or 3D artist. Connect and make it beautiful
+            !!
+          </p>
+        </div>
+      </div>
+      <div class="secondsection">
+        <div class="image">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/010/869/738/original/faq-concept-illustration-people-looking-through-magnifying-glass-at-interrogation-point-searching-solutions-useful-information-customer-support-solving-problem-free-png.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <div class="hire">
+        <button>Hire Artist</button>
+      </div>
+      <div class="work">
+        <button><i class="fa-solid fa-play"></i>How it works?</button>
+      </div>
+    </div>
+    <footer>
+      <i class="fa-brands fa-linkedin-in"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-meta"></i>
+    </footer>
+  </body>
+</html>

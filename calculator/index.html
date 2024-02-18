@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      #calculator {
+        border: 2px solid #8bcbe3;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: lightblue;
+      }
+
+      .button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+
+      .button:hover {
+        background-color: #ddd;
+      }
+
+      #display {
+        width: calc(100% - 40px);
+        height: 60px;
+        margin-bottom: 10px;
+        font-size: 28px;
+        text-align: right;
+        padding: 10px;
+        border: 1px solid #c4c1c1;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: rgb(221, 219, 219);
+        color: #333;
+        outline: none;
+      }
+
+      #buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+      .C {
+        background-color: rgb(247, 172, 184);
+      }
+      .T {
+        background-color: rgb(247, 247, 136);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <input id="display" type="text" readonly />
+      <div id="buttons">
+        <button class="button" onclick="appendToDisplay('7')">7</button>
+        <button class="button" onclick="appendToDisplay('8')">8</button>
+        <button class="button" onclick="appendToDisplay('9')">9</button>
+        <button class="button" onclick="appendToDisplay('/')">/</button>
+        <button class="button" onclick="appendToDisplay('4')">4</button>
+        <button class="button" onclick="appendToDisplay('5')">5</button>
+        <button class="button" onclick="appendToDisplay('6')">6</button>
+        <button class="button" onclick="appendToDisplay('*')">*</button>
+        <button class="button" onclick="appendToDisplay('1')">1</button>
+        <button class="button" onclick="appendToDisplay('2')">2</button>
+        <button class="button" onclick="appendToDisplay('3')">3</button>
+        <button class="button" onclick="appendToDisplay('-')">-</button>
+        <button class="button" onclick="appendToDisplay('0')">0</button>
+        <button class="button C" onclick="clearDisplay()">C</button>
+        <button class="button T" onclick="calculate()">=</button>
+        <button class="button" onclick="appendToDisplay('+')">+</button>
+      </div>
+    </div>
+
+    <script>
+      function appendToDisplay(value) {
+        document.getElementById("display").value += value;
+      }
+
+      function clearDisplay() {
+        document.getElementById("display").value = "";
+      }
+
+      function calculate() {
+        const expression = document.getElementById("display").value;
+        const result = eval(expression);
+        document.getElementById("display").value = result;
+      }
+    </script>
+  </body>
+</html>
